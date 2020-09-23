@@ -8,11 +8,28 @@
       background: url("https://wpamelia.com/wp-content/uploads/2018/11/ezgif-2-6d0b072c3d3f.gif")
         50% 50% no-repeat rgb(249, 249, 249);
       opacity: 1;
-    }</style><body><noscript></noscript><div id=preloaders class=preloader></div><div id=app></div><script type=text/javascript src=/static/js/manifest.2ae2e69a05c33dfc65f8.js></script><script type=text/javascript src=/static/js/vendor.c196c50f046812883574.js></script><script type=text/javascript src=/static/js/app.ca65df647ba09d0a49cf.js></script></body></html><script src=https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js></script><script src=https://cdn.jsdelivr.net/npm/vue></script><script src=https://cdn.jsdelivr.net/npm/vue-awesome-swiper></script><script>// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+      animation: loader 4s infinite ease;
+    }
+    #stop-scrolling {
+      height: 100% !important;
+      overflow: hidden !important;
+    }</style><body id=stop-scrolling><noscript></noscript><div id=preloaders class=preloader></div><div id=app></div><script type=text/javascript src=/static/js/manifest.2ae2e69a05c33dfc65f8.js></script><script type=text/javascript src=/static/js/vendor.c196c50f046812883574.js></script><script type=text/javascript src=/static/js/app.ca65df647ba09d0a49cf.js></script></body></html><script src=https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js></script><script src=https://cdn.jsdelivr.net/npm/vue></script><script src=https://cdn.jsdelivr.net/npm/vue-awesome-swiper></script><script>// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
 
-  $(window).on("load", function() {
-    $(".preloader").fadeOut("slow");
-  });
+  // $(window).on("load", function() {
+  //   $(".preloader").fadeOut("slow");
+  // });
+
+    function preloaderFadeOutInit(){
+      $('.preloader').fadeOut('slow');
+      $('body').attr('id','');
+    }
+    // Window load function
+    jQuery(window).on('load', function () {
+      (function ($) {
+       preloaderFadeOutInit();
+      })(jQuery);
+    })
+
   $(document).ready(function() {
     var my_posts = $("[rel=tooltip]");
 
