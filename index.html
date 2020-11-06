@@ -20,7 +20,7 @@
   function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
-  gtag('config', 'UA-55111077-7');</script><body id=stop-scrolling><div id=preloaders class=preloader></div><div id=app></div><script type=text/javascript src=/static/js/manifest.2ae2e69a05c33dfc65f8.js></script><script type=text/javascript src=/static/js/vendor.c7bfb3d15dd0364a6931.js></script><script type=text/javascript src=/static/js/app.74b89662f908adb4d2a5.js></script></body></html><script src=https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.0/vue.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.4/lodash.js></script><script src=vue-google-maps.js></script><script>// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+  gtag('config', 'UA-55111077-7');</script><body id=stop-scrolling><div id=preloaders class=preloader></div><div id=app></div><script type=text/javascript src=/static/js/manifest.2ae2e69a05c33dfc65f8.js></script><script type=text/javascript src=/static/js/vendor.c7bfb3d15dd0364a6931.js></script><script type=text/javascript src=/static/js/app.54e18c1249ef4cbc8380.js></script></body></html><script>// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
 
   // $(window).on("load", function() {
   //   $(".preloader").fadeOut("slow");
@@ -43,33 +43,33 @@
   });
 
   var a = 0;
-var x = document.getElementById("app");
-$( document ).ready(function() {
-  getLocation()
+  var x = document.getElementById("app");
+  $(document).ready(function () {
+    getLocation()
     //  localStorage.latitude = GeolocationPosition.coords.latitude
     //   localStorage.longitude = GeolocationPosition.coords.longitude
     //   console.log('latitude: ', localStorage.latitude)
     //   console.log('longitude: ', localStorage.longitude)
-  
-});
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-    
-  }
-  else{
-    localStorage.latitude = 10.7642693
-    localStorage.longitude = 106.6813455
-  }
-}
 
-function showPosition(position) {
-  console.log('location: ',position)
- 
+  });
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
 
-  // x.innerHTML = "Latitude: " + position.coords.latitude + 
-  // "<br>Longitude: " + position.coords.longitude;
-}
+    }
+    else {
+      localStorage.latitude = 10.7642693
+      localStorage.longitude = 106.6813455
+    }
+  }
+
+  function showPosition(position) {
+    console.log('location: ', position)
+
+
+    // x.innerHTML = "Latitude: " + position.coords.latitude + 
+    // "<br>Longitude: " + position.coords.longitude;
+  }
 
   // reloadpage when back browser
 // window.addEventListener('popstate', function(event) {
@@ -93,7 +93,7 @@ function showPosition(position) {
   //   const map = new google.maps.Map(document.getElementById("map"), {
   //     zoom: 14,
   //     center: { lat: 10.761011199999999, lng: 106.68605439999999 },
-      
+
   //   });
   //   directionsRenderer.setMap(map);
   //   calculateAndDisplayRoute(directionsService, directionsRenderer);
